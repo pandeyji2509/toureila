@@ -27,42 +27,34 @@ import useElementOnScreen from './useElementOnScreen';
 
 function Header() {
     const targetRef = useRef(null);
-    const isVisible =useElementOnScreen({
-        root: null,
-        rootMargin: '-100px',
-        threshold: 1
-    }, targetRef);
+    useEffect(()=>{
+        const header = document.querySelector(".categories");
+        const sectionOne = document.querySelector(".tickets");
+        
+        const sectionOneOptions = {
+          rootMargin: "0px 0px 0px 0px",
+          threshold:0.7
+        };
+        
+        const sectionOneObserver = new IntersectionObserver(function(
+          entries,
+          sectionOneObserver
+        ) {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+              header.classList.add("sticky");
+              sectionOne.classList.add("ml");
+            } else {
+              header.classList.remove("sticky");
+              sectionOne.classList.remove("ml");
+            }
+          });
+        },
+        sectionOneOptions);
+        
+        sectionOneObserver.observe(sectionOne);
+    },[])
 
-    // const [address, setAddress] = useState('');
-    // const handleSelect = async value => { };
-    // const date = new Date();
-    // let day = date.getDate();
-    // let year = date.getFullYear();
-    // const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    // const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    // let weekday = weekdays[date.getDay()];
-    // const d = new Date();
-    // let name = month[d.getMonth()];
-    /*******************************************************************************************************************/
-    // const [searchResult, setSearchResult] = useState('');
-    // const autocompleteRef = useRef();
-    // const { isLoaded } = useLoadScript({
-    //     googleMapsApiKey: 'AIzaSyDEZmcRELqDrBFKyTEHHswwFcQgOOnapdE',
-    //     libraries: ['places'],
-    // });
-    // const onLoad = () => {
-    //     const autocomplete = autocompleteRef.current
-    // }
-    // const onPlaceChanged = (place) => {
-    //     setSearchResult(place)
-    //     console.log(searchResult)
-    // }
-
-    // if (!isLoaded) {
-    //     return <div>Loading...</div>
-    // };
-
-   
     return (
         <div className="container">
             <Router>
@@ -78,7 +70,7 @@ function Header() {
                         <img
                             className="logo"
                             src={Logo} alt="logo" />             
-                        <div className= "categories sticky" ref={targetRef}>
+                        <div className= "categories" ref={targetRef}>
                         <span><RiFlightTakeoffFill className='fas' />Flights</span>
                             <span><FaHotel className='fas' />Hotels</span>
                             <span><MdTrain className='fas' />Trains</span>
