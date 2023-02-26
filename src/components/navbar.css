@@ -1,4 +1,4 @@
-*{
+/* *{
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -6,7 +6,10 @@
     text-transform: capitalize;
     box-sizing: border-box;
   }
-
+.logot{
+  width: 90%;
+  height: 45px;
+}
   header{
     position: relative;
     top: 0;
@@ -14,7 +17,7 @@
     right: 0;
     background:#6fdeef ;
     box-shadow:0 5px 10px rgba(0,0,0,.1) ;
-    padding: 0px 7%;
+    padding: 0px 1250px 0 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,8 +42,45 @@
     display: block;
     text-decoration: none;
   }
+  
+  .apply {
+    background-color: #6fdeef;
+    border-radius: 8px;
+    border-style: none;
+    box-sizing: border-box;
+    cursor: pointer;
+    flex-shrink: 0;
+    font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    height: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    text-align: center;
+    transition: all .5s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: px;
+  }
+  @media (max-width:2000px){
+    .apply{
+    margin-right: -75rem;
+    }
+  }
+  .apply:hover {
+    box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+    transition-duration: .1s;
+  }
+  @media (min-width: 768px) {
+    .apply {
+      padding: 10px 2rem;
+    }
+  }
   header .navbar ul :hover{
-    
     background:#63c2d1 ;
   }
   header .navbar ul li:focus-within >ul,
@@ -59,9 +99,12 @@ header label{
 @media (max-width:991px){
     header{
         padding: 20px;
+        transition-delay: 8s;
+        transition: transform 4s ease-out;
     }
     header label{
         display: initial;
+        transition: transform 4s ease-out;
     }
     header .navbar{
         position: absolute;
@@ -73,27 +116,33 @@ header label{
         display: none;
         box-shadow: 0 7px 10px rgba(0,0,0,.1) ;
         border-radius: 0px 0px 20px 20px;
+        transition:width 2s;
     }
     header .navbar ul li{
         width: 100%;
-   
+        transition: transform 4s ease-out;
+        transition-delay:0s,0s,0.3s;
     }
     header .navbar ul li ul{
         position: relative;
         width: 100%;
-       
-        
+        transition: transform 4s ease-out;
+        transform: translateY(3em);
+        transition-delay:0s,0s,0.3s;
     }
     header .navbar ul li ul li{
         background:#eeeeee ;
-        
+        transform: translateY(3em);
+        transition-delay:0s,0s,0.3s;
     }
     header .navbar ul li ul li ul{
         width: 1005;
-        left:0;
+        left:0;    
     }
     #menu-bar:checked~.navbar{
         display: initial;
-        background:#6fdeef ;
+        background:#6fdeef;
+        transition:transform 1s ease-out;
+        margin-left: 0px;
     }
-}
+} */

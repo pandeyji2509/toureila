@@ -1,0 +1,209 @@
+body{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  font-family: "Lato";
+  color: rgb(107, 107, 107);
+  background:#f2f2f2;
+  background-repeat: no-repeat;
+  background-size: 100% 500px; 
+  justify-content: center;
+  overflow-x: hidden;
+}
+.home{
+  width:100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+.overlay{
+  position: absolute;
+  z-index: 1;
+}
+video{
+  position: absolute;
+  width:225vh;
+  height: 176vh;
+  top:0;
+  bottom:0;
+  object-fit: cover;
+}
+.container{
+   width: 1200px;
+}
+.logo{
+  height: 36px;
+  width: 113px;
+  margin: 10px;
+}
+.data{
+  display:flex; 
+  position: relative;
+}
+.main{
+  display: flex;  
+  position: relative;
+}
+.categories{
+  background-color: white;
+  width: 950px;
+  margin-top: 70px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 1px 15px 1px #7a7a7a;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 2;
+  margin-left: -85px;
+}
+.login{
+  margin-left: 10px;
+  margin-top: 20px;
+}
+ /* .gap{
+  height: 300vh;
+}  */
+::placeholder{
+  margin: 15px;
+  color: black;
+  width: 300px;
+  border-right:1px solid rgb(140,139,139);
+}
+.l{
+  margin-top: -100px;
+  font-weight: 800;
+  z-index: 10000;
+}
+.categories span{
+  font-size: 14px;
+  padding: 10px;
+  padding-top: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-size: 16px;
+}
+.fas{
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.sticky{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 0 2rem 0 rgba(0,0,0,0.1);
+  margin-left: 0px;
+  margin-top: 0px;
+}
+.tickets{
+    background-color: white;
+    height: 400px;
+    position: absolute;
+    top: 115px;
+    z-index: 1;
+    border-radius: 10px ;
+    padding: 20px;
+    padding-top: 0px;
+    margin-left: -550px;
+}
+.b{
+  margin-bottom: 0px;
+}
+.ticket-type{
+    margin-top:50px ;
+    font-size: 14px; 
+    font-weight: 800;
+    padding: 10px;
+}
+.ticket-type span{
+    padding: 5px;
+}
+.ticket-type span i{
+    font-size: 14px;
+}
+.ticket-left h1{
+  margin: 0;
+  color: black;
+}
+.ticket-left{
+  padding: 20px;
+  border-right: 1px solid rgb(204,203,203);
+}
+.selected-ticket-type{
+    background-color: rgb(211, 211, 211);
+    border-radius: 30px;
+}
+.flight-search{
+    border: 1px solid rgb(202, 202, 202);
+    display: flex;
+    margin-top: 10px;
+    border-radius: 10px; 
+}
+input{
+  border: none;
+}
+.head{
+  margin-top: 0px;
+  font-weight: 700;
+  color: #000;
+}
+.tap{
+  font-weight:400;
+  color:#000;
+}
+.trav{
+  width: 20%;
+  font-weight:800;
+  margin-right:-15px;
+  color:#000;
+  margin-top: 15px;
+}
+.cla{
+  margin-right:-15px;
+  display: flex;
+}
+.flight{
+  margin: 15px;
+  color: black;
+  width: 300px;
+  border-right:1px solid rgb(140,139,139);
+}
+.flight h1{
+  margin: 0;
+}
+.fare-search{
+  margin-top: 35px;
+  font-size: 14px;
+  display: flex;
+}
+.fare-select{
+  width: 80px;
+  display: flex;
+}
+.selected-fare-type i{
+  font-size: 14px;
+  color: rgb(18,119,226);
+}
+.fare-type span{
+   color: rgb(80,80,80);
+   margin: 6px;
+}
+.search-button{
+  width: 216px;
+  height:  44px;
+  background-image: linear-gradient(93deg,#53b2fe,#065af3);
+  color:white;
+  font-size: 28px;
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -20px;
+  left: 40%;
+}
+.passenger{
+  margin-top: 16px;
+}

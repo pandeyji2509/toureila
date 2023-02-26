@@ -12,14 +12,14 @@
     --bodyColor:rgb(240,240,246);
     --cardBg:rgb(225,225,235);
 }
-
+@media only screen and (min-width: 768px) {
 .home{
     width:100%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: auto;
+    margin: autozzz;
 }
     .overlay{
         position: absolute;
@@ -27,8 +27,8 @@
     }
     video{
         position: absolute;
-        height: 118%;
-        width:225vh;
+        height: 108%;
+        width:215vh;
         top:0;
         bottom:0;
         object-fit: cover;
@@ -45,13 +45,21 @@
         margin:auto;
         color:var(--whiteColor);
         z-index: 100;
+    
     }
     .textDiv{
         padding:2rem 0 ;
+        gap:rem;
     }
     .smallText{
         font-size: 13px;
         text-transform: uppercase;
+    }
+    .inl{
+        align-content: space-between;
+        justify-content: space-between;
+        display: inline;
+        grid-column-end: auto;
     }
     .homeTitle{
         position:relative;
@@ -59,12 +67,13 @@
     }
     .cardDiv{
         position: relative;
-        padding: 2rem 1rem;
+        padding: 1rem 1rem;
         background: var(--whiteColor);
         border-radius: 10px;
-        gap:1rem;
+        gap:1rem; 
+        display: grid;
+        grid-row: 1;
     }
-
     label{
         display: block;
         color: var(--textColor);
@@ -72,31 +81,42 @@
         font-size: 13px;
         font-weight: 500;
         margin-top: 10px;
-        margin-left: 7px;
+        margin-left: 4px;
+        display: grid;
+        grid-row: 1; 
+    }
+    .ds{
+        display: grid;
     }
     .label_total{
         justify-content: space-between;
         align-items: center;
+        margin-left: 10px;
     }
     .total{
-            color: var(--textColor);
-            font-size: 18px;
-            padding-bottom:10px;
+        color: var(--textColor);
+        font-size: 18px;
+        padding-bottom:10px;
+        display: flex;
+        flex-direction: row;
+        margin-left: 10px;
         }
-    .input{
+    .input1{
         height: 40px;
         padding: 0 1rem;
         background:var(--inputColor);
         border-radius:3rem;
-        }
-        input{
+        width: 90%;
+    }}
+    input{
             background:none;
             border: none;
             outline: none;
-            width: 100%;
+            width: 95%;
             font-size: 13px;
             font-weight: 500;
             margin-top: 8px;
+            margin-left: 8px;
         }
         .icon{
             font-size: 18px;
@@ -122,8 +142,8 @@
         .searchOptions:hover{
             background-color: var(--PrimaryColor);
         }
-
-        @media only screen and (max-width: 600px) {
+    
+        @media only screen and (max-width: 1200px) {
             .icon{
                 font-size: 18px;
                 margin: auto;
@@ -131,6 +151,14 @@
                 margin-left: 350px;     
                 position: static;    
             }
+            .input1{
+                background:var(--inputColor);
+                border-radius: 3rem;
+                justify-content: center;
+                text-align: center; 
+                height: 35px; 
+                position: relative; 
+            }
         }
-    
+     
  */
